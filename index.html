@@ -81,6 +81,26 @@
         document.getElementById("lastUpdated").textContent = "—";
       });
  </script>
+<script>
+async function loadVersion() {
+  try {
+    const res = await fetch("data/version.json");
+    const data = await res.json();
+    const version = data.version;
+
+    const footer = document.querySelector(".page-footer");
+    if (footer) {
+      const versionLine = document.createElement("p");
+      versionLine.textContent = `Recipes · v${version}`;
+      footer.prepend(versionLine);
+    }
+  } catch (e) {
+    console.warn("Version load failed");
+  }
+}
+
+loadVersion();
+</script>
 
 </body>
 </html>
