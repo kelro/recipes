@@ -70,7 +70,12 @@
       .then(data => {
         const date = new Date(data.commit.committer.date);
         document.getElementById("lastUpdated").textContent =
-          date.toLocaleDateString();
+          date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "numeric"
+});
+
       })
       .catch(() => {
         document.getElementById("lastUpdated").textContent = "—";
