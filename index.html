@@ -54,12 +54,28 @@
     <code>data/recipes.json</code>.
   </p>
   <p class="version-badge">
-    Recipes · v1.1.0
+    Recipes · v1.1.0<br>
+    Last updated: <span id="lastUpdated">Loading…</span>
   </p>
 </footer>
 
 
+
   <script src="js/sidebar.js"></script>
   <script src="js/cook-mode.js" defer></script>
+
+  <script>
+    fetch("https://api.github.com/repos/kelro/recipes/commits/main")
+      .then(response => response.json())
+      .then(data => {
+        const date = new Date(data.commit.committer.date);
+        document.getElementById("lastUpdated").textContent =
+          date.toLocaleDateString();
+      })
+      .catch(() => {
+        document.getElementById("lastUpdated").textContent = "—";
+      });
+ </script>
+
 </body>
 </html>
