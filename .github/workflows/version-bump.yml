@@ -2,7 +2,8 @@ name: Auto Version Bump
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -14,26 +15,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Bump patch version
         run: |
-          python <<EOF
-import json
+          python - << 'EOF'
+          import json
 
-with open("data/version.json") as f:
-    data = json.load(f)
+          with open("data/version.json") as f:
+              data = json.load(f)
 
-major, minor, patch = map(int, data["version"].split("."))
-patch += 1
-data["version"] = f"{major}.{minor}.{patch}"
+          major, minor, patch = map(int, data["version"].split("."))
+          patch += 1
+          data["version"] = f"{major}.{minor}.{patch}"
 
-with open("data/version.json", "w") as f:
-    json.dump(data, f, indent=2)
+          with open("data/version.json", "w") as f:
+              json.dump(data, f, indent=2)
 
-print("New version:", data["version"])
-EOF
+          print("New version:", data["version"])
+          EOF
 
       - name: Commit and push updated version
         run: |
