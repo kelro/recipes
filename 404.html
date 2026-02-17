@@ -4,36 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page Not Found | Recipes</title>
-  <link rel="stylesheet" href="css/slate.css">
-  <link rel="stylesheet" href="css/recipes.css">
-  <style>
-    .not-found {
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    .not-found h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .not-found p {
-      opacity: 0.8;
-      margin-bottom: 2rem;
-    }
-    .not-found a {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background: #1f7a8c;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-  </style>
+
+  <link rel="stylesheet" href="css/slate.css" />
+  <link rel="stylesheet" href="css/recipes.css" />
 </head>
+
 <body>
-  <div class="not-found">
-    <h1>404</h1>
-    <p>That recipe seems to have wandered off the cutting board.</p>
-    <a href="index.html">Return to Recipes</a>
-  </div>
+
+  <header class="page-header">
+    <div class="page-header-main">
+      <h1>Recipes</h1>
+      <p class="subtitle">Clean, simple and printable.</p>
+    </div>
+  </header>
+
+  <main class="content-container">
+    <div class="card not-found">
+      <h2>404 — Recipe Not Found</h2>
+      <p>
+        That recipe seems to have wandered off the cutting board.
+      </p>
+      <a class="btn-primary" href="/recipes/">
+        ← Return to Recipes
+      </a>
+    </div>
+  </main>
+
 </body>
 </html>
