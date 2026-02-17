@@ -2,50 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ron Kelley’s Recipe Library</title>
-  <style>
-    :root { color-scheme: light; }
-    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; margin: 0; padding: 0; line-height: 1.45; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 28px 18px 40px; }
-    h1 { margin: 0 0 10px; font-size: 2rem; }
-    p { margin: 0 0 12px; font-size: 1.05rem; }
-    ul { margin: 10px 0 20px 22px; }
-    .card { border: 1px solid rgba(0,0,0,.12); border-radius: 14px; padding: 18px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 10px 16px; border-radius: 999px; border: 1px solid rgba(0,0,0,.18);
-      text-decoration: none; font-weight: 600;
-    }
-    .btn:hover { filter: brightness(0.98); }
-    .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-    .muted { opacity: .75; font-size: .95rem; }
-    code { background: rgba(0,0,0,.06); padding: 1px 6px; border-radius: 8px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipes</title>
+  <link rel="stylesheet" href="css/slate.css" />
+  <link rel="stylesheet" href="css/recipes.css" />
 </head>
-<body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Ron Kelley’s Recipe Library</h1>
-      <p>
-        A practical, kitchen-friendly collection of recipes I use regularly — including family favorites,
-        simple weeknight meals, and a growing set of Blue Zones–inspired dishes.
-      </p>
-      <ul>
-        <li>Organized by category with a fast sidebar</li>
-        <li>Print-friendly formatting</li>
-        <li>Designed for cooking, not scrolling</li>
-      </ul>
 
-      <div class="row">
-        <a class="btn" href="./app/">Enter the Recipe Library →</a>
-        <a class="btn" href="https://github.com/kelro/recipes">View on GitHub</a>
-      </div>
+<body data-sidebar-collapsed="true">
 
-      <p class="muted" style="margin-top:14px;">
-        Tip: Bookmark <code>/app/</code> on your phone for one-tap access while cooking.
-      </p>
+  <header class="page-header">
+    <div class="page-header-main">
+      <h1>Recipes</h1>
+      <p class="subtitle">Clean, simple and printable.</p>
     </div>
-  </div>
+  </header>
+
+  <nav class="link-row" aria-label="Primary">
+    <a href="index.html" aria-current="page">All Recipes</a>
+  </nav>
+
+  <main class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar card" aria-label="Recipe navigation">
+      <div class="sidebar-title">Browse</div>
+      <div class="sidebar-search">
+        <input id="recipeSearch" type="text" placeholder="Search recipes…" autocomplete="off" />
+      </div>
+      <div id="sidebarContent" class="text-muted">Loading…</div>
+    </aside>
+
+    <!-- Main -->
+    <section>
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">All Recipes</div>
+            
+          </div>
+        </div>
+        <div id="allRecipes" class="text-muted">Loading…</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p class="footer-note">Tip: add new recipes by generating a new HTML file + one entry in <code>data/recipes.json</code>.</p>
+  </footer>
+
+  <script src="js/sidebar.js"></script>
+  <script src="js/cook-mode.js" defer></script>
 </body>
 </html>
