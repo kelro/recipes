@@ -26,7 +26,7 @@ fi
 
 # ---- Normalize recipe HTML files ----
 echo "• Updating recipe HTML files"
-for file in recipes/*.html; do
+for file in *.html; do
   for FROM in "${!MAP[@]}"; do
     TO="${MAP[$FROM]}"
     sed -i "s/>${FROM}</>${TO}</g" "$file"

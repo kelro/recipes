@@ -3,25 +3,25 @@
     "title":"Recipe Template",
     "slug":"recipe-template",
     "category":"Reference",
-    "path":"recipes/recipe-template.html"
+    "path":"recipe-template.html"
   },
   {
   "title": "Reames® Classic Chicken Noodle Soup",
   "slug": "reamess-classic-chicken-noodle-soup",
   "category": "Soups & Stews",
-  "path": "recipes/reamess-classic-chicken-noodle-soup.html"
+  "path": "reamess-classic-chicken-noodle-soup.html"
   },
   {
   "title": "Thai Rice Soup",
   "slug": "thai-rice-soup",
   "category": "Soups & Stews",
-  "path": "recipes/thai-rice-soup.html"
+  "path": "thai-rice-soup.html"
   },
   {
     "title": "Mac & Cheese",
     "slug": "mac-and-cheese",
     "category": "Sides",
-    "path": "recipes/mac-and-cheese.html",
+    "path": "mac-and-cheese.html",
     "author": "Ronald Kelley",
     "source": "Family Recipe"
 },
@@ -29,84 +29,84 @@
   "title": "Paella (Chicken & Seafood)",
   "slug": "paella-chicken-and-seafood",
   "category": "Main Dishes",
-  "path": "recipes/paella-chicken-and-seafood.html"
+  "path": "paella-chicken-and-seafood.html"
 },
 {
   "title": "Chicken Noodle Soup (Denise King)",
   "slug": "chicken-noodle-soup-denise-king",
   "category": "Soups & Stews",
-  "path": "recipes/chicken-noodle-soup-denise-king.html"
+  "path": "chicken-noodle-soup-denise-king.html"
 },
 {
   "title": "Smoked Pork Shoulder (Pulled Pork)",
   "slug": "smoked-pork-shoulder-pulled-pork",
   "category": "Main Dishes",
-  "path": "recipes/smoked-pork-shoulder-pulled-pork.html"
+  "path": "smoked-pork-shoulder-pulled-pork.html"
 },{
   "title": "Basil Pesto",
   "slug": "basil-pesto",
   "category": "Sauces & Seasonings",
-  "path": "recipes/basil-pesto.html"
+  "path": "basil-pesto.html"
 },
 {
   "title": "Prime Rib",
   "slug": "prime-rib",
   "category": "Main Dishes",
-  "path": "recipes/prime-rib.html"
+  "path": "prime-rib.html"
 },
 {
   "title": "Cornbread & Cream Corn Casserole",
   "slug": "cornbread-cream-corn-casserole",
   "category": "Sides",
-  "path": "recipes/cornbread-cream-corn-casserole.html"
+  "path": "cornbread-cream-corn-casserole.html"
 },
 {
   "title": "Sardinia Minestrone Soup",
   "slug": "sardinia-minestrone-soup",
   "category": "Soups & Stews",
-  "path": "recipes/sardinia-minestrone-soup.html"
+  "path": "sardinia-minestrone-soup.html"
 },
 {
   "title": "Corned Beef",
   "slug": "corned-beef",
   "category": "Main Dishes",
-  "path": "recipes/corned-beef.html"
+  "path": "corned-beef.html"
 },
 {
   "title": "Corned Beef Spice Mix",
   "slug": "corned-beef-spice-mix",
   "category": "Sauces & Seasonings",
-  "path": "recipes/corned-beef-spice-mix.html"
+  "path": "corned-beef-spice-mix.html"
 },
 {
   "title": "Yellow Curry Chicken",
   "slug": "yellow-curry-chicken",
   "category": "Main Dishes",
-  "path": "recipes/yellow-curry-chicken.html"
+  "path": "yellow-curry-chicken.html"
 },
 {
   "title": "Homemade Spice Mixes",
   "slug": "homemade-spice-mixes",
   "category": "Sauces & Seasonings",
-  "path": "recipes/homemade-spice-mixes.html"
+  "path": "homemade-spice-mixes.html"
 },
 {
   "title": "Curry Sauce",
   "slug": "curry-sauce",
   "category": "Sauces & Seasonings",
-  "path": "recipes/curry-sauce.html"
+  "path": "curry-sauce.html"
 },
 {
   "title": "Pumpkin Pie",
   "slug": "pumpkin-pie",
   "category": "Desserts",
-  "path": "recipes/pumpkin-pie.html"
+  "path": "pumpkin-pie.html"
 },
   {
     "title": "Pumpkin Roll",
     "slug": "pumpkin-roll",
     "category": "Desserts",
-    "path": "recipes/pumpkin-roll.html",
+    "path": "pumpkin-roll.html",
     "author": "Elizabeth Kelley",
     "source": "Family Recipe"
   },
@@ -114,7 +114,7 @@
     "title": "Apricot Cookies",
     "slug": "apricot-cookies",
     "category": "Desserts",
-    "path": "recipes/apricot-cookies.html",
+    "path": "apricot-cookies.html",
     "author": "Elizabeth Kelley",
     "source": "Family Recipe"
 },
@@ -122,7 +122,7 @@
     "title": "Dressing",
     "slug": "dressing",
     "category": "Sides",
-    "path": "recipes/dressing.html",
+    "path": "dressing.html",
     "author": "Vicki Long",
     "source": "Family Recipe"
 },
@@ -130,13 +130,13 @@
   "title": "How To Add Recipes",
   "slug": "how-to-add-recipes",
   "category": "Reference",
-  "path": "recipes/how-to-add-recipes.html"
+  "path": "how-to-add-recipes.html"
 },
 {
     "title": "Best Turkey Meatloaf We've Made",
     "slug": "best-turkey-meatloaf",
     "category": "Main Dishes",
-    "path": "recipes/best-turkey-meatloaf.html",
+    "path": "best-turkey-meatloaf.html",
     "author": "Adam Gallagher",
     "source": "Inspired Taste"
 },
@@ -144,13 +144,13 @@
   "title": "Baked Cauliflower",
   "slug": "baked-cauliflower",
   "category": "Sides",
-  "path": "recipes/baked-cauliflower.html"
+  "path": "baked-cauliflower.html"
 },
 {
   "title": "Adventist Vegetable Soup",
   "slug": "adventist-vegetable-soup",
   "category": "Soups & Stews",
-  "path": "recipes/adventist-vegetable-soup.html",
+  "path": "adventist-vegetable-soup.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -158,7 +158,7 @@
   "title": "Black Bean Soup",
   "slug": "black-bean-soup",
   "category": "Soups & Stews",
-  "path": "recipes/black-bean-soup.html",
+  "path": "black-bean-soup.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -166,7 +166,7 @@
   "title": "Broccoli Cashew Cream Soup",
   "slug": "broccoli-cashew-cream-soup",
   "category": "Soups & Stews",
-  "path": "recipes/broccoli-cashew-cream-soup.html",
+  "path": "broccoli-cashew-cream-soup.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -174,7 +174,7 @@
   "title": "Curried Cauliflower Soup",
   "slug": "curried-cauliflower-soup",
   "category": "Soups & Stews",
-  "path": "recipes/curried-cauliflower-soup.html",
+  "path": "curried-cauliflower-soup.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -182,7 +182,7 @@
   "title": "Easy Lentil Soup",
   "slug": "easy-lentil-soup",
   "category": "Soups & Stews",
-  "path": "recipes/easy-lentil-soup.html",
+  "path": "easy-lentil-soup.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -190,7 +190,7 @@
   "title": "Lentil Soup Ikaria Sardinia",
   "slug": "lentil-soup-ikaria-sardinia",
   "category": "Soups & Stews",
-  "path": "recipes/lentil-soup-ikaria-sardinia.html",
+  "path": "lentil-soup-ikaria-sardinia.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -198,7 +198,7 @@
   "title": "Okinawan Cream of Mushroom Soup",
   "slug": "okinawan-cream-of-mushroom-soup",
   "category": "Soups & Stews",
-  "path": "recipes/okinawan-cream-of-mushroom-soup.html",
+  "path": "okinawan-cream-of-mushroom-soup.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -206,7 +206,7 @@
   "title": "White Bean Vegetable Soup",
   "slug": "white-bean-vegetable-soup",
   "category": "Soups & Stews",
-  "path": "recipes/white-bean-vegetable-soup.html",
+  "path": "white-bean-vegetable-soup.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -214,7 +214,7 @@
     "title": "Simple Black Beans",
     "slug": "simple-black-beans",
     "category": "Beans",
-    "path": "recipes/simple-black-beans.html",
+    "path": "simple-black-beans.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -222,7 +222,7 @@
     "title": "Cuban Black Beans",
     "slug": "cuban-black-beans",
     "category": "Beans",
-    "path": "recipes/cuban-black-beans.html",
+    "path": "cuban-black-beans.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -230,7 +230,7 @@
     "title": "Mediterranean Chickpeas",
     "slug": "mediterranean-chickpeas",
     "category": "Beans",
-    "path": "recipes/mediterranean-chickpeas.html",
+    "path": "mediterranean-chickpeas.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -238,7 +238,7 @@
     "title": "Lentils with Herbs",
     "slug": "lentils-with-herbs",
     "category": "Beans",
-    "path": "recipes/lentils-with-herbs.html",
+    "path": "lentils-with-herbs.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -246,7 +246,7 @@
     "title": "White Beans with Garlic and Olive Oil",
     "slug": "white-beans-garlic-olive-oil",
     "category": "Beans",
-    "path": "recipes/white-beans-garlic-olive-oil.html",
+    "path": "white-beans-garlic-olive-oil.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -254,7 +254,7 @@
     "title": "Ikaria-Style Chickpeas",
     "slug": "ikaria-style-chickpeas",
     "category": "Beans",
-    "path": "recipes/ikaria-style-chickpeas.html",
+    "path": "ikaria-style-chickpeas.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -262,7 +262,7 @@
     "title": "Costa Rican Black Beans",
     "slug": "costa-rican-black-beans",
     "category": "Beans",
-    "path": "recipes/costa-rican-black-beans.html",
+    "path": "costa-rican-black-beans.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -270,7 +270,7 @@
     "title": "Adventist Baked Beans",
     "slug": "adventist-baked-beans",
     "category": "Beans",
-    "path": "recipes/adventist-baked-beans.html",
+    "path": "adventist-baked-beans.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -278,7 +278,7 @@
     "title": "Sardinian Fava Beans",
     "slug": "sardinian-fava-beans",
     "category": "Beans",
-    "path": "recipes/sardinian-fava-beans.html",
+    "path": "sardinian-fava-beans.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -286,7 +286,7 @@
     "title": "Ikaria Longevity Stew",
     "slug": "ikaria-longevity-stew",
     "category": "Beans",
-    "path": "recipes/ikaria-longevity-stew.html",
+    "path": "ikaria-longevity-stew.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -294,7 +294,7 @@
     "title": "Ikaria-Style Roasted Vegetables",
     "slug": "ikaria-style-roasted-vegetables",
     "category": "Vegetables",
-    "path": "recipes/ikaria-style-roasted-vegetables.html",
+    "path": "ikaria-style-roasted-vegetables.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -302,7 +302,7 @@
     "title": "Mediterranean Roasted Vegetables",
     "slug": "mediterranean-roasted-vegetables",
     "category": "Vegetables",
-    "path": "recipes/mediterranean-roasted-vegetables.html",
+    "path": "mediterranean-roasted-vegetables.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -310,7 +310,7 @@
     "title": "Sardinian Greens with Garlic",
     "slug": "sardinian-greens-garlic",
     "category": "Vegetables",
-    "path": "recipes/sardinian-greens-garlic.html",
+    "path": "sardinian-greens-garlic.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -318,7 +318,7 @@
     "title": "Okinawan Stir-Fried Vegetables",
     "slug": "okinawan-stir-fried-vegetables",
     "category": "Vegetables",
-    "path": "recipes/okinawan-stir-fried-vegetables.html",
+    "path": "okinawan-stir-fried-vegetables.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -326,7 +326,7 @@
     "title": "Ikaria-Style Braised Greens",
     "slug": "ikaria-braised-greens",
     "category": "Vegetables",
-    "path": "recipes/ikaria-braised-greens.html",
+    "path": "ikaria-braised-greens.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -334,7 +334,7 @@
     "title": "Roasted Sweet Potatoes",
     "slug": "roasted-sweet-potatoes",
     "category": "Vegetables",
-    "path": "recipes/roasted-sweet-potatoes.html",
+    "path": "roasted-sweet-potatoes.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -342,7 +342,7 @@
     "title": "Mediterranean Roasted Eggplant",
     "slug": "mediterranean-roasted-eggplant",
     "category": "Vegetables",
-    "path": "recipes/mediterranean-roasted-eggplant.html",
+    "path": "mediterranean-roasted-eggplant.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -350,7 +350,7 @@
     "title": "Coconut Curry Tofu",
     "slug": "coconut-curry-tofu",
     "category": "Main Dishes",
-    "path": "recipes/coconut-curry-tofu.html",
+    "path": "coconut-curry-tofu.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -358,7 +358,7 @@
     "title": "Paella with Chickpeas, Green Beans, and Shishito Peppers",
     "slug": "paella-with-chickpeas-green-beans-and-shishito-peppers",
     "category": "Main Dishes",
-    "path": "recipes/paella-with-chickpeas-green-beans-and-shishito-peppers.html",
+    "path": "paella-with-chickpeas-green-beans-and-shishito-peppers.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -366,7 +366,7 @@
     "title": "Mediterranean Grain Bowl",
     "slug": "mediterranean-grain-bowl",
     "category": "Main Dishes",
-    "path": "recipes/mediterranean-grain-bowl.html",
+    "path": "mediterranean-grain-bowl.html",
     "author": "BlueZones.com",
     "source": "Blue Zones Official Recipes"
   },
@@ -374,7 +374,7 @@
     "title": "Teriyaki Tofu Don",
     "slug": "teriyaki-tofu-don",
     "category": "Main Dishes",
-    "path": "recipes/teriyaki-tofu-don.html",
+    "path": "teriyaki-tofu-don.html",
     "author": "Julia Boucachard",
     "source": "Blue Zones Official Recipes"
   },
@@ -382,7 +382,7 @@
   "title": "Costa Rican Gallo Pinto",
   "slug": "costa-rican-gallo-pinto",
   "category": "Main Dishes",
-  "path": "recipes/costa-rican-gallo-pinto.html",
+  "path": "costa-rican-gallo-pinto.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -390,7 +390,7 @@
   "title": "Ikaria-Style Lentils with Vegetables",
   "slug": "ikaria-lentils-vegetables",
   "category": "Main Dishes",
-  "path": "recipes/ikaria-lentils-vegetables.html",
+  "path": "ikaria-lentils-vegetables.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -398,7 +398,7 @@
   "title": "White Bean & Vegetable Casserole",
   "slug": "white-bean-vegetable-casserole",
   "category": "Main Dishes",
-  "path": "recipes/white-bean-vegetable-casserole.html",
+  "path": "white-bean-vegetable-casserole.html",
   "author": "BlueZones.com",
   "source": "Blue Zones Official Recipes"
 },
@@ -406,7 +406,7 @@
   "title": "Broccoli Peanut Soup",
   "slug": "broccoli-peanut-soup",
   "category": "Soups & Stews",
-  "path": "recipes/broccoli-peanut-soup.html",
+  "path": "broccoli-peanut-soup.html",
   "author": "Nava Atlas",
   "source": "Blue Zones Official Recipes"
 },
@@ -414,7 +414,7 @@
   "title": "Sweet Potato Casserole",
   "slug": "sweet-potato-casserole",
   "category": "Desserts",
-  "path": "recipes/sweet-potato-casserole.html",
+  "path": "sweet-potato-casserole.html",
   "author": "Jennifer Picklo",
   "source": "Family Recipe"
 },
@@ -422,7 +422,7 @@
   "title": "Whole-Wheat Sourdough: Starter to First Loaf",
   "slug": "whole-wheat-sourdough-starter-first-loaf",
   "category": "Breads",
-  "path": "recipes/whole-wheat-sourdough-starter-first-loaf.html",
+  "path": "whole-wheat-sourdough-starter-first-loaf.html",
   "author": "Unknown",
   "source": "Personal Recipe"
 },
@@ -430,7 +430,7 @@
   "title": "Classic Chicken Salad",
   "slug": "classic-chicken-salad",
   "category": "Sides",
-  "path": "recipes/classic-chicken-salad.html",
+  "path": "classic-chicken-salad.html",
   "author": "Unknown",
   "source": "Personal Recipe"
 },
@@ -438,7 +438,7 @@
   "title": "Masala Chai Latte",
   "slug": "masala-chai-latte",
   "category": "Beverages",
-  "path": "recipes/masala-chai-latte.html",
+  "path": "masala-chai-latte.html",
   "author": "Laxmi Rudrappa",
   "source": "Personal Recipe"
 },
@@ -446,7 +446,7 @@
   "title": "Slow Cooker Split Pea Soup",
   "slug": "slow-cooker-split-pea-soup",
   "category": "Soups & Stews",
-  "path": "recipes/slow-cooker-split-pea-soup.html",
+  "path": "slow-cooker-split-pea-soup.html",
   "author": "Pioneer Woman Test Kitchen",
   "source": "The Pioneer Woman Official Recipes"
 },
@@ -454,7 +454,7 @@
   "title": "Split Pea Soup With Ham",
   "slug": "split-pea-soup-with-ham",
   "category": "Soups & Stews",
-  "path": "recipes/split-pea-soup-with-ham.html",
+  "path": "split-pea-soup-with-ham.html",
   "author": "Erin Merhar",
   "source": "The Pioneer Woman Official Recipes"
 },
@@ -462,7 +462,7 @@
   "title": "Cilantro Lime Crema (Costco Copycat)",
   "slug": "cilantro-lime-crema-costco-copycat",
   "category": "Sauces & Seasonings",
-  "path": "recipes/cilantro-lime-crema-costco-copycat.html",
+  "path": "cilantro-lime-crema-costco-copycat.html",
   "author": "Unknown",
   "source": "Internet Recipe"
 },
@@ -470,7 +470,7 @@
   "title": "Golden Spice Wellness Drink",
   "slug": "golden-spice-wellness-drink",
   "category": "Beverages",
-  "path": "recipes/golden-spice-wellness-drink.html",
+  "path": "golden-spice-wellness-drink.html",
   "author": "Ronald Kelley",
   "source": "Original wellness drink formulation"
 },
@@ -478,7 +478,7 @@
   "title": "Vegetable Shepherd’s Pie",
   "slug": "vegetable-shepherds-pie",
   "category": "Main Dishes",
-  "path": "recipes/vegetable-shepherds-pie.html",
+  "path": "vegetable-shepherds-pie.html",
   "author": "Blue Zones",
   "source": "Adapted from bluezones.com recipe"
 },
@@ -486,7 +486,7 @@
   "title": "Indian Chickpeas",
   "slug": "indian-chickpeas",
   "category": "Main Dishes",
-  "path": "recipes/indian-chickpeas.html",
+  "path": "indian-chickpeas.html",
   "author": "Blue Zones",
   "source": "Adapted from bluezones.com recipe"
 },
@@ -494,7 +494,7 @@
   "title": "Ikarian-Style Sourdough Bread",
   "slug": "ikarian-style-sourdough-bread",
   "category": "Breads",
-  "path": "recipes/ikarian-style-sourdough-bread.html",
+  "path": "ikarian-style-sourdough-bread.html",
   "author": "Blue Zones",
   "source": "Adapted from Blue Zones Kitchen cookbook"
 },
@@ -502,7 +502,7 @@
   "title": "Spiced Lentil Dip",
   "slug": "spiced-lentil-dip",
   "category": "Appetizer",
-  "path": "recipes/spiced-lentil-dip.html",
+  "path": "spiced-lentil-dip.html",
   "author": "Blue Zones",
   "source": "Adapted from bluezones.com recipe"
 },
@@ -510,7 +510,7 @@
   "title": "Green Smoothie",
   "slug": "green-smoothie",
   "category": "Beverages",
-  "path": "recipes/green-smoothie.html",
+  "path": "green-smoothie.html",
   "author": "Blue Zones",
   "source": "Adapted from bluezones.com recipe"
 },
@@ -518,7 +518,7 @@
   "title": "Miso Soup with Vegetables",
   "slug": "miso-soup-with-vegetables",
   "category": "Soups & Stews",
-  "path": "recipes/miso-soup-with-vegetables.html",
+  "path": "miso-soup-with-vegetables.html",
   "author": "Blue Zones",
   "source": "Adapted from bluezones.com recipe"
 },
@@ -526,7 +526,7 @@
   "title": "Turmeric Latte — Foamy Golden Milk",
   "slug": "turmeric-latte-foamy-golden-milk",
   "category": "Beverages",
-  "path": "recipes/turmeric-latte-foamy-golden-milk.html",
+  "path": "turmeric-latte-foamy-golden-milk.html",
   "author": "Blue Zones",
   "source": "Adapted from bluezones.com recipe"
 },
@@ -534,7 +534,7 @@
   "title": "Lemon and Herb Roasted Potatoes",
   "slug": "lemon-and-herb-roasted-potatoes",
   "category": "Sides",
-  "path": "recipes/lemon-and-herb-roasted-potatoes.html",
+  "path": "lemon-and-herb-roasted-potatoes.html",
   "author": "Blue Zones",
   "source": "Adapted from bluezones.com recipe"
 },
@@ -542,7 +542,7 @@
   "title": "Banana Oatmeal Cookies",
   "slug": "banana-oatmeal-cookies",
   "category": "Snacks",
-  "path": "recipes/banana-oatmeal-cookies.html",
+  "path": "banana-oatmeal-cookies.html",
   "author": "Ellen Sushak, RDN, Blue Zones Project Dodge County",
   "source": "Adapted from bluezones.com recipe",
   "servings": "8"
@@ -551,7 +551,7 @@
   "title": "Empanadas",
   "slug": "empanadas",
   "category": "Main Dishes",
-  "path": "recipes/empanadas.html",
+  "path": "empanadas.html",
   "author": "Ronald Kelley",
   "source": "Personal recipe"
 },
@@ -559,7 +559,7 @@
   "title": "Shrimp Linguine",
   "slug": "shrimp-linguine",
   "category": "Main Dishes",
-  "path": "recipes/shrimp-linguine.html",
+  "path": "shrimp-linguine.html",
   "author": "K. Gerretsen (Allrecipes member)",
   "source": "Adapted from allrecipes.com recipe"
 },
@@ -567,7 +567,7 @@
   "title": "Copycat Van Stapele Cookies (Amsterdam Cookies)",
   "slug": "copycat-van-stapele-cookies",
   "category": "Desserts",
-  "path": "recipes/copycat-van-stapele-cookies.html",
+  "path": "copycat-van-stapele-cookies.html",
   "author": "Courtney Rich (Cake by Courtney)",
   "source": "Adapted from cakebycourtney.com copycat Van Stapele Cookies recipe"
 },
@@ -575,7 +575,7 @@
   "title": "The Best Ever Veggie Enchiladas",
   "slug": "best-ever-veggie-enchiladas",
   "category": "Main Dishes",
-  "path": "recipes/best-ever-veggie-enchiladas.html",
+  "path": "best-ever-veggie-enchiladas.html",
   "author": "Joy Shull",
   "source": "Adapted from buildyourbite.com recipe"
 },
@@ -583,7 +583,7 @@
   "title": "Protein Smoothie",
   "slug": "protein-smoothie",
   "category": "Beverages",
-  "path": "recipes/protein-smoothie.html",
+  "path": "protein-smoothie.html",
   "author": "Ronald Kelley",
   "source": "Personal recipe"
 },
@@ -591,7 +591,7 @@
   "title": "Olivia’s Old South Chicken Salad",
   "slug": "olivias-old-south-chicken-salad",
   "category": "Main Dishes",
-  "path": "recipes/olivias-old-south-chicken-salad.html",
+  "path": "olivias-old-south-chicken-salad.html",
   "author": "Heather Johnson (The Food Hussy)",
   "source": "Adapted from thefoodhussy.com recipe"
 },
@@ -599,7 +599,7 @@
   "title": "Baked White Fish with Lemon-Herb Sauce",
   "slug": "baked-white-fish-lemon-herb-sauce",
   "category": "Main Dishes",
-  "path": "recipes/baked-white-fish-lemon-herb-sauce.html",
+  "path": "baked-white-fish-lemon-herb-sauce.html",
   "author": "Ronald Kelley",
   "source": "Personal recipe"
 },
@@ -607,7 +607,7 @@
   "title": "Spanish Paella with Chicken and Seafood",
   "slug": "spanish-paella-with-chicken-and-seafood",
   "category": "Main Dishes",
-  "path": "recipes/spanish-paella-with-chicken-and-seafood.html",
+  "path": "spanish-paella-with-chicken-and-seafood.html",
   "author": "Suzy Karadsheh (The Mediterranean Dish)",
   "source": "Adapted from themediterraneandish.com Spanish Paella with Chicken and Seafood Recipe",
   "servings": 8,
@@ -618,7 +618,7 @@
   "title": "Galway Pie Maker – Slow-Braised Beef & Stout Pie",
   "slug": "galway-pie-maker-beef-stout-wild-rice",
   "category": "Main Dishes",
-  "path": "recipes/galway-pie-maker-beef-stout-wild-rice.html",
+  "path": "galway-pie-maker-beef-stout-wild-rice.html",
   "author": "Ronald Kelley and ChatGPT",
   "source": "Personal recipe inspired by Galway, Ireland"
 },
@@ -626,7 +626,7 @@
   "title": "Soothing Herbal Cough & Mucus Tea",
   "slug": "soothing-herbal-cough-mucus-tea",
   "category": "Beverages",
-  "path": "recipes/soothing-herbal-cough-mucus-tea.html",
+  "path": "soothing-herbal-cough-mucus-tea.html",
   "author": "Ronald Kelley",
   "source": "Traditional herbal cough and throat remedy"
 },
@@ -634,7 +634,7 @@
   "title": "Non-Alcoholic Hot Toddy",
   "slug": "non-alcoholic-hot-toddy",
   "category": "Beverages",
-  "path": "recipes/non-alcoholic-hot-toddy.html",
+  "path": "non-alcoholic-hot-toddy.html",
   "author": "Ronald Kelley",
   "source": "Classic non-alcoholic hot toddy variation"
 },
@@ -642,7 +642,7 @@
   "title": "Hot Toddy (Soothe Your Throat + Warm Up)",
   "slug": "hot-toddy",
   "category": "Beverages",
-  "path": "recipes/hot_toddy_soothe_your_throat_warm_up.html",
+  "path": "hot_toddy_soothe_your_throat_warm_up.html",
   "author": "Classic drink",
   "source": "Traditional hot toddy recipe"
 },
@@ -650,7 +650,7 @@
     "title": "Avocado & Tuna Tomato Salad Stack",
     "slug": "avocado-tuna-tomato-salad-stack",
     "category": "Main Dishes",
-    "path": "recipes/avocado-tuna-tomato-salad-stack.html",
+    "path": "avocado-tuna-tomato-salad-stack.html",
     "author": "Unknown",
     "source": "Internet recipe"
   },
@@ -658,7 +658,7 @@
     "title": "Sweet Potato Hash with Avocado Aioli",
     "slug": "sweet-potato-hash-with-avocado-aioli",
     "category": "Main Dishes",
-    "path": "recipes/sweet-potato-hash-with-avocado-aioli.html",
+    "path": "sweet-potato-hash-with-avocado-aioli.html",
     "author": "Unknown",
     "source": "Internet recipe"
   },
@@ -666,7 +666,7 @@
   "title": "Probiotic Cultured Drink",
   "slug": "probiotic-cultured-drink",
   "category": "Beverages",
-  "path": "recipes/probiotic-cultured-drink.html",
+  "path": "probiotic-cultured-drink.html",
   "author": "ChatGPT and Ronald Kelley",
   "source": "Original formulation"
 },
@@ -674,7 +674,7 @@
   "title": "Low-Glycemic Gut Drink",
   "slug": "low-glycemic-gut-drink",
   "category": "Beverages",
-  "path": "recipes/low-glycemic-gut-drink.html",
+  "path": "low-glycemic-gut-drink.html",
   "author": "ChatGPT and Ronald Kelley",
   "source": "Original formulation"
 },
@@ -682,7 +682,7 @@
   "title": "Whole-Wheat Sourdough (80% Whole Wheat)",
   "slug": "whole-wheat-sourdough-80-20",
   "category": "Breads",
-  "path": "recipes/whole-wheat-sourdough-80-20.html",
+  "path": "whole-wheat-sourdough-80-20.html",
   "author": "ChatGPT",
   "source": "Adapted from original whole-wheat sourdough formula"
 },
@@ -690,14 +690,14 @@
   "title": "Steak Marinade",
   "slug": "steak-marinade",
   "category": "Main Dishes",
-  "path": "recipes/steak-marinade.html",
+  "path": "steak-marinade.html",
   "author": "Creme de la Crumb",
   "source": "cremedelacrumb.com"
 },
 {
   "title": "Electric Smoker Baby Back Ribs (3 lbs)",
   "slug": "smoked-baby-back-ribs",
-  "path": "recipes/smoked-baby-back-ribs.html",
+  "path": "smoked-baby-back-ribs.html",
   "category": "Main Dishes",
   "author": "ChatGPT",
   "source": "Personal method"
