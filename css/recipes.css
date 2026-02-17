@@ -130,3 +130,10 @@ hr.soft {
   .link-row { flex-wrap: wrap; gap: 8px; }
   .link-row a, .link-row button { margin: 0; }
 }
+
+.version-badge {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
