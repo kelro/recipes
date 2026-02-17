@@ -4,11 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Recipes</title>
+
   <link rel="stylesheet" href="css/slate.css" />
   <link rel="stylesheet" href="css/recipes.css" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
-
 </head>
 
 <body data-sidebar-collapsed="true">
@@ -25,82 +27,82 @@
   </nav>
 
   <main class="layout">
+
     <!-- Sidebar -->
     <aside class="sidebar card" aria-label="Recipe navigation">
       <div class="sidebar-title">Browse</div>
+
       <div class="sidebar-search">
-        <input id="recipeSearch" type="text" placeholder="Search recipes…" autocomplete="off" />
+        <input id="recipeSearch"
+               type="text"
+               placeholder="Search recipes…"
+               autocomplete="off" />
       </div>
-      <div id="sidebarContent" class="text-muted">Loading…</div>
+
+      <div id="sidebarContent" class="text-muted">
+        Loading…
+      </div>
     </aside>
 
-    <!-- Main -->
+    <!-- Main Content -->
     <section>
       <div class="card">
         <div class="card-header">
-          <div>
-            <div class="card-title">All Recipes</div>
-            
-          </div>
+          <div class="card-title">All Recipes</div>
         </div>
-        <div id="allRecipes" class="text-muted">Loading…</div>
+
+        <div id="allRecipes" class="text-muted">
+          Loading…
+        </div>
       </div>
     </section>
+
   </main>
 
-<footer class="page-footer">
-  <p class="footer-note">
-    Tip: add new recipes by generating a new HTML file + one entry in 
-    <code>data/recipes.json</code>.
-  </p>
-  <p class="version-badge">
-    Recipes · v1.1.0<br>
-    Last updated: <span id="lastUpdated">Loading…</span>
-  </p>
-</footer>
+  <!-- Footer -->
+  <footer class="page-footer">
 
+    <div id="versionInfo" class="version-badge">
+      Loading version…
+    </div>
 
+    <p class="footer-note">
+      Tip: add new recipes by generating a new HTML file +
+      one entry in <code>data/recipes.json</code>.
+    </p>
 
+  </footer>
+
+  <!-- Scripts -->
   <script src="js/sidebar.js"></script>
   <script src="js/cook-mode.js" defer></script>
 
+  <!-- Version Loader -->
   <script>
-    fetch("https://api.github.com/repos/kelro/recipes/commits/main")
-      .then(response => response.json())
-      .then(data => {
-        const date = new Date(data.commit.committer.date);
-        document.getElementById("lastUpdated").textContent =
-          date.toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "short",
-            day: "numeric"
-});
+    async function loadVersion() {
+      try {
+        const res = await fetch("data/version.json");
+        const data = await res.json();
 
-      })
-      .catch(() => {
-        document.getElementById("lastUpdated").textContent = "—";
-      });
- </script>
-<script>
-async function loadVersion() {
-  try {
-    const res = await fetch("data/version.json");
-    const data = await res.json();
-    const version = data.version;
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric"
+        });
 
-    const footer = document.querySelector(".page-footer");
-    if (footer) {
-      const versionLine = document.createElement("p");
-      versionLine.textContent = `Recipes · v${version}`;
-      footer.prepend(versionLine);
+        document.getElementById("versionInfo").innerHTML = `
+          Recipes · v${data.version}<br>
+          Last updated: ${formattedDate}
+        `;
+      } catch (e) {
+        document.getElementById("versionInfo").textContent =
+          "Version info unavailable";
+      }
     }
-  } catch (e) {
-    console.warn("Version load failed");
-  }
-}
 
-loadVersion();
-</script>
+    loadVersion();
+  </script>
 
 </body>
 </html>
