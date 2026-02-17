@@ -21,27 +21,27 @@ jobs:
       - name: Validate recipe paths exist
         run: |
           echo "Checking recipe paths in data/recipes.json..."
-          python <<EOF
-import json
-import os
-import sys
+          python << 'EOF'
+          import json
+          import os
+          import sys
 
-with open("data/recipes.json") as f:
-    data = json.load(f)
+          with open("data/recipes.json") as f:
+              data = json.load(f)
 
-errors = 0
+          errors = 0
 
-for entry in data:
-    path = entry.get("path")
-    if not path:
-        continue
-    if not os.path.isfile(path):
-        print(f"Missing file: {path}")
-        errors += 1
+          for entry in data:
+              path = entry.get("path")
+              if not path:
+                  continue
+              if not os.path.isfile(path):
+                  print(f"Missing file: {path}")
+                  errors += 1
 
-if errors > 0:
-    print(f"\nValidation failed: {errors} missing file(s).")
-    sys.exit(1)
-else:
-    print("All recipe paths are valid.")
-EOF
+          if errors > 0:
+              print(f"\nValidation failed: {errors} missing file(s).")
+              sys.exit(1)
+          else:
+              print("All recipe paths are valid.")
+          EOF
