@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipes</title>
+
+  <link rel="stylesheet" href="css/slate.css" />
+  <link rel="stylesheet" href="css/recipes.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
+</head>
+
+<body data-sidebar-collapsed="true">
+
+  <header class="page-header">
+    <div class="page-header-main">
+      <h1>Recipes</h1>
+      <p class="subtitle">Clean, simple and printable.</p>
+    </div>
+  </header>
+
+  <nav class="link-row" aria-label="Primary">
+    <a href="/recipes/" aria-current="page">All Recipes</a>
+  </nav>
+
+  <main class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar card" aria-label="Recipe navigation">
+      <div class="sidebar-title">Browse</div>
+
+      <div class="sidebar-search">
+        <input id="recipeSearch"
+               type="text"
+               placeholder="Search recipes…"
+               autocomplete="off" />
+      </div>
+
+      <div id="sidebarContent" class="text-muted">
+        Loading…
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <section>
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">All Recipes</div>
+        </div>
+
+        <div id="allRecipes" class="text-muted">
+          Loading…
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="page-footer">
+  <p class="footer-note">
+    Tip: add new recipes by generating a new HTML file + one entry in 
+    <code>data/recipes.json</code>.
+  </p>
+
+  <p id="versionInfo" class="version-badge">
+    Loading version…
+  </p>
+</footer>
+
+
+  <!-- Scripts -->
+  <script src="js/sidebar.js"></script>
+  <script src="js/cook-mode.js" defer></script>
+
+<!-- Version Loader -->
+<script>
+async function loadVersion() {
+  try {
+    const res = await fetch("data/version.json");
+    const data = await res.json();
+
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    });
+
+    document.getElementById("versionInfo").innerHTML = `
+      Recipes · v${data.version}<br>
+      Last updated: ${formattedDate}
+    `;
+  } catch {
+    document.getElementById("versionInfo").textContent =
+      "Version info unavailable";
+  }
+}
+
+loadVersion();
+</script>
+
+
+</body>
+</html>

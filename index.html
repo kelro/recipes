@@ -4,13 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Recipes</title>
-
-  <link rel="stylesheet" href="css/slate.css" />
-  <link rel="stylesheet" href="css/recipes.css" />
-
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
+  <link rel="stylesheet" href="ENV{SLATE}" />
+  <link rel="stylesheet" href="ENV{RECIPES}" />
+  <link rel="stylesheet" href="ENV{PRINT}" />
 </head>
 
 <body data-sidebar-collapsed="true">
@@ -73,7 +72,6 @@
 
 
   <!-- Scripts -->
-  <script src="js/sidebar.js"></script>
   <script src="js/cook-mode.js" defer></script>
 
 <!-- Version Loader -->
@@ -104,5 +102,6 @@ loadVersion();
 </script>
 
 
+<script src="ENV{SIDEBAR}"></script>
 </body>
 </html>
