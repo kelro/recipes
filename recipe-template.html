@@ -4,16 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RECIPE_TITLE</title>
+  <meta name="description" content="Short description goes here." />
 
   <!-- REQUIRED STYLES -->
   <link rel="stylesheet" href="css/slate.css" />
   <link rel="stylesheet" href="css/recipes.css" />
   <link rel="stylesheet" href="css/print.css" />
 </head>
+
 <body>
 
   <!-- =========================================================
-       PAGE HEADER (TITLE + BADGES)
+       PAGE HEADER
   ========================================================= -->
   <header class="page-header">
     <div class="page-header-main">
@@ -21,7 +23,9 @@
       <p class="subtitle">Short description goes here.</p>
 
       <div class="recipe-meta">
-       <span class="badge"><span class="badge-dot"></span>CATEGORY <!-- must be plural (see category standards) --></span>
+        <span class="badge">
+          <span class="badge-dot"></span>CATEGORY
+        </span>
         <span class="badge">METHOD</span>
         <span class="badge">TIME</span>
       </div>
@@ -29,9 +33,9 @@
   </header>
 
   <!-- =========================================================
-       NAV BAR (DO NOT MODIFY STRUCTURE)
+       NAVIGATION
   ========================================================= -->
-  <nav class="link-row" aria-label="Primary">
+  <nav class="link-row">
     <a href="./">All Recipes</a>
     <a href="#" aria-current="page">RECIPE_TITLE</a>
     <button class="btn btn-sm" onclick="window.print()">Print</button>
@@ -42,8 +46,8 @@
   ========================================================= -->
   <main class="layout">
 
-    <!-- SIDEBAR (REQUIRED — DO NOT MODIFY) -->
-    <aside class="sidebar card" aria-label="Recipe navigation">
+    <!-- SIDEBAR (REQUIRED – DO NOT MODIFY) -->
+    <aside class="sidebar card">
       <div class="sidebar-title">Browse</div>
       <div class="sidebar-search">
         <input
@@ -64,7 +68,7 @@
         <div class="card-header">
           <div>
             <div class="card-title">Ingredients</div>
-            <div class="card-subtitle">Optional short ingredient note.</div>
+            <div class="card-subtitle">Optional short note.</div>
           </div>
         </div>
 
@@ -81,7 +85,7 @@
         <div class="card-header">
           <div>
             <div class="card-title">Procedure</div>
-            <div class="card-subtitle">Optional short procedure note.</div>
+            <div class="card-subtitle">Optional instruction note.</div>
           </div>
         </div>
 
@@ -91,12 +95,21 @@
             <li>Step two</li>
           </ol>
         </div>
+      </div>
 
-        <hr class="soft" />
+      <!-- OPTIONAL NOTES CARD -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Notes</div>
+            <div class="card-subtitle">Tips, storage, variations.</div>
+          </div>
+        </div>
 
-        <!-- NOTES -->
-        <div class="card-info-box">
-          <strong>Notes:</strong> Optional tips, storage notes, or variations.
+        <div class="procedure">
+          <ul>
+            <li>Optional note</li>
+          </ul>
         </div>
       </div>
 
@@ -108,7 +121,7 @@
   ========================================================= -->
   <footer class="page-footer">
     <p class="footer-note">
-      Category: <span class="text-muted">CATEGORY <!-- plural only --></span><br />
+      Category: <span class="text-muted">CATEGORY</span><br />
       Author: <span class="text-muted">AUTHOR</span><br />
       Source: <span class="text-muted">SOURCE</span>
     </p>
@@ -116,5 +129,6 @@
 
   <!-- REQUIRED SCRIPT -->
   <script src="js/sidebar.js"></script>
+
 </body>
 </html>

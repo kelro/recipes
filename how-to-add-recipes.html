@@ -14,116 +14,43 @@
   <header class="page-header">
     <div class="page-header-main">
       <h1>How to Add Recipes</h1>
-      <p class="subtitle">
-        Official, locked process for adding recipes to the site.
-      </p>
+      <p class="subtitle">Official, locked process for adding recipes to the site.</p>
     </div>
   </header>
 
   <main class="layout">
 
-    <!-- CONTENT ONLY (NO SIDEBAR NEEDED HERE) -->
     <section class="card">
 
       <h2>Overview</h2>
       <ul>
-        <li>Each recipe lives in its own HTML file</li>
-        <li>Each recipe has a corresponding entry in <code>recipes.json</code></li>
-        <li>Sidebar behavior depends on exact markup and IDs</li>
-        <li>Printing depends on <code>print.css</code></li>
-        <li>Categories must use standardized plural names to avoid sidebar duplication</li>
+        <li>Each recipe lives in its own HTML file.</li>
+        <li>Each recipe has a corresponding entry in <code>recipes.json</code>.</li>
+        <li>All pages must use <code>recipe-template-new.html</code>.</li>
+        <li>Asset paths are always root-relative (<code>css/</code>, <code>js/</code>).</li>
       </ul>
 
       <hr class="soft" />
 
       <h2>Pre-Flight Checklist</h2>
       <ul>
-        <li>Start from <code>recipe-template.html</code> — never from scratch</li>
-        <li>Do not add emojis anywhere (HTML or JSON)</li>
-        <li>Do not change CSS or JS paths</li>
-        <li>Ensure all ingredients include quantities</li>
-        <li>Ensure procedures are numbered steps</li>
+        <li>Copy <code>recipe-template-new.html</code></li>
+        <li>Rename using kebab-case (example: <code>golden-spice-drink.html</code>)</li>
+        <li>Edit content only — never structure</li>
+        <li>No emojis in HTML or JSON</li>
+        <li>All ingredients must include quantities</li>
+        <li>Procedures must use numbered steps</li>
       </ul>
-<hr class="soft" />
-
-<h2>Category Standards (Locked)</h2>
-
-<p>
-All recipe categories are <strong>plural</strong>. Categories represent collections, not individual items.
-Using singular forms will cause duplicate categories to appear in the sidebar.
-</p>
-
-<p><strong>Use only the standardized categories below:</strong></p>
-
-<ul>
-  <li>Appetizers</li>
-  <li>Beans</li>
-  <li>Beverages</li>
-  <li>Breads</li>
-  <li>Desserts</li>
-  <li>Main Dishes</li>
-  <li>Reference</li>
-  <li>Sauces</li>
-  <li>Sauces &amp; Dressings</li>
-  <li>Sauces &amp; Seasonings</li>
-  <li>Side Dishes</li>
-  <li>Snacks</li>
-  <li>Soups &amp; Stews</li>
-  <li>Vegetables</li>
-</ul>
-
-<p>
-<strong>Do not invent new categories</strong> without updating documentation, normalization scripts,
-and validation rules.
-</p>
-<hr class="soft" />
-
-<h2>Category Standards (Locked)</h2>
-
-<p>
-All recipe categories are <strong>plural</strong>. Categories represent collections, not individual items.
-Using singular forms will cause duplicate categories to appear in the sidebar.
-</p>
-
-<p><strong>Use only the standardized categories below:</strong></p>
-
-<ul>
-  <li>Appetizers</li>
-  <li>Beans</li>
-  <li>Beverages</li>
-  <li>Breads</li>
-  <li>Desserts</li>
-  <li>Main Dishes</li>
-  <li>Reference</li>
-  <li>Sauces</li>
-  <li>Sauces &amp; Dressings</li>
-  <li>Sauces &amp; Seasonings</li>
-  <li>Side Dishes</li>
-  <li>Snacks</li>
-  <li>Soups &amp; Stews</li>
-  <li>Vegetables</li>
-</ul>
-
-<p>
-<strong>Do not invent new categories</strong> without updating documentation, normalization scripts,
-and validation rules.
-</p>
 
       <hr class="soft" />
 
-      <h2>Step 1: Create the Recipe HTML</h2>
-      <ol>
-        <li>Copy <code>recipe-template.html</code></li>
-        <li>Rename using kebab-case (example: <code>golden-spice-drink.html</code>)</li>
-        <li>Edit only text content — not structure</li>
-      </ol>
-
-      <p><strong>Never change:</strong></p>
+      <h2>Locked Structure Rules</h2>
       <ul>
-        <li><code>&lt;main class="layout"&gt;</code></li>
-        <li>Sidebar markup or IDs</li>
-        <li>Class names</li>
-        <li>Script include paths</li>
+        <li>Do not modify <code>&lt;main class="layout"&gt;</code></li>
+        <li>Do not modify sidebar markup or IDs</li>
+        <li>Do not change CSS or JS paths</li>
+        <li>Do not change class names</li>
+        <li>All Recipes link must be <code>href="./"</code></li>
       </ul>
 
       <hr class="soft" />
@@ -132,25 +59,41 @@ and validation rules.
       <ol>
         <li>Page header (title, subtitle, badges)</li>
         <li>Navigation bar</li>
-        <li>Ingredients</li>
-        <li>Procedure</li>
-        <li>Optional notes</li>
+        <li>Ingredients card</li>
+        <li>Procedure card</li>
+        <li>Optional Notes card</li>
         <li>Footer metadata</li>
       </ol>
+
+      <hr class="soft" />
+
+      <h2>Category Standards (Locked)</h2>
+      <p>All categories are plural. Use only these:</p>
+
+      <ul>
+        <li>Appetizers</li>
+        <li>Beans</li>
+        <li>Beverages</li>
+        <li>Breads</li>
+        <li>Desserts</li>
+        <li>Main Dishes</li>
+        <li>Reference</li>
+        <li>Sauces</li>
+        <li>Sauces &amp; Dressings</li>
+        <li>Sauces &amp; Seasonings</li>
+        <li>Side Dishes</li>
+        <li>Snacks</li>
+        <li>Soups &amp; Stews</li>
+        <li>Vegetables</li>
+      </ul>
 
       <hr class="soft" />
 
       <h2>Printing Rules</h2>
       <ul>
         <li>All recipes must link <code>print.css</code></li>
-        <li>Print output includes only:
-          <ul>
-            <li>Title</li>
-            <li>Ingredients</li>
-            <li>Procedure</li>
-          </ul>
-        </li>
-        <li>Sidebar and decorative elements are suppressed</li>
+        <li>Print button must use <code>onclick="window.print()"</code></li>
+        <li>Sidebar is automatically hidden in print view</li>
       </ul>
 
       <hr class="soft" />
@@ -167,11 +110,19 @@ and validation rules.
 
       <hr class="soft" />
 
+      <h2>Git Workflow</h2>
+      <pre><code>git add recipe-name.html
+git commit -m "Added recipe-name"
+git push</code></pre>
+
+      <hr class="soft" />
+
       <h2>Final Validation</h2>
       <ul>
         <li>Sidebar loads and search works</li>
-        <li>Print button produces clean output</li>
+        <li>Print output is clean</li>
         <li>No console errors</li>
+        <li>No incorrect asset paths</li>
       </ul>
 
     </section>
