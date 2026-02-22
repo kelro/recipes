@@ -11,9 +11,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16.png">
 
   <!-- REQUIRED STYLES -->
-  <link rel="stylesheet" href="css/slate.css" />
-  <link rel="stylesheet" href="css/recipes.css" />
-  <link rel="stylesheet" href="css/print.css" media="print" />
+  <link rel="stylesheet" href="ENV{SLATE}" />
+  <link rel="stylesheet" href="ENV{RECIPES}" />
+  <link rel="stylesheet" href="ENV{PRINT}" />
 </head>
 
 <body>
@@ -123,8 +123,6 @@
   </footer>
 
   <!-- REQUIRED SCRIPTS -->
-  <script src="js/sidebar.js"></script>
-
   <!-- PRINT BUTTON SCRIPT -->
   <script>
     document.getElementById("printBtn")?.addEventListener("click", () => {
@@ -132,5 +130,6 @@
     });
   </script>
 
+<script src="ENV{SIDEBAR}"></script>
 </body>
 </html>
