@@ -137,3 +137,22 @@ hr.soft {
   margin-top: 0.5rem;
 }
 
+/* ---------- Nutrition Block ---------- */
+
+.nutrition-block {
+  list-style: none;
+  margin-top: 18px;
+  padding: 16px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+}
+
+.nutrition-block h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: #9ad0ff;
+}
+
+
+

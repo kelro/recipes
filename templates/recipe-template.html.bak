@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{TITLE}}</title>
+
+  <link rel="stylesheet" href="css/slate.css" />
+  <link rel="stylesheet" href="css/recipes.css" />
+  <link rel="stylesheet" href="css/print.css" />
+</head>
+<body>
+
+<header class="page-header">
+  <div class="page-header-main">
+    <h1>{{TITLE}}</h1>
+    <p class="subtitle">{{SUBTITLE}}</p>
+
+    <div class="recipe-meta">
+      <span class="badge"><span class="badge-dot"></span>{{CATEGORY}}</span>
+      <span class="badge">{{SERVINGS}}</span>
+      <span class="badge">{{TIMING}}</span>
+    </div>
+  </div>
+</header>
+
+<nav class="link-row" aria-label="Primary">
+  <a href="index.html">All Recipes</a>
+  <a href="#" aria-current="page">{{TITLE}}</a>
+  <button class="btn btn-sm" onclick="window.print()">Print</button>
+</nav>
+
+<main class="layout">
+
+  <aside class="sidebar card">
+    <div class="sidebar-title">Browse</div>
+    <div class="sidebar-search">
+      <input id="recipeSearch" type="text" placeholder="Search recipes…" />
+    </div>
+    <div id="sidebarContent">Loading…</div>
+  </aside>
+
+  <section>
+
+    {{INGREDIENTS_HTML}}
+
+    {{PROCEDURE_HTML}}
+
+    {{NOTES_HTML}}
+
+  </section>
+</main>
+
+<footer class="page-footer">
+  <p class="footer-note">
+    Category: <span class="text-muted">{{CATEGORY}}</span><br />
+    Author: <span class="text-muted">{{AUTHOR}}</span><br />
+    Source: <span class="text-muted">{{SOURCE}}</span>
+  </p>
+</footer>
+
+<script src="js/sidebar.js"></script>
+<script src="js/recipe-runtime.js"></script>
+
+<script type="application/json" id="recipe-data">
+{{RECIPE_JSON}}
+</script>
+
+</body>
+</html>

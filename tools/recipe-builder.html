@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipe Builder</title>
+
+<link rel="stylesheet" href="/dev-recipes/css/slate.css">
+<link rel="stylesheet" href="/dev-recipes/css/recipes.css">
+<link rel="stylesheet" href="/dev-recipes/css/print.css">
+
+<style>
+.recipe-container {
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  background-color: #1b1f26;
+  color: #e6e6e6;
+  border: 1px solid #3a3f47;
+  border-radius: 6px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #5c9ded;
+}
+
+.ingredient-row {
+  display: grid;
+  grid-template-columns: 100px 140px 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  min-height: 70px;
+}
+
+button {
+  margin-top: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="page-header">
+  <div class="page-header-main">
+    <h1>Recipe Builder</h1>
+    <p class="subtitle">Generate recipe HTML + sidebar JSON safely.</p>
+  </div>
+</header>
+
+<main class="recipe-container">
+
+<!-- BASIC INFO -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">Basic Info</div>
+  </div>
+
+  <input id="title" placeholder="Title">
+  <input id="subtitle" placeholder="Subtitle">
+
+  <select id="category">
+    <option value="">Select Category</option>
+    <option>Main Dishes</option>
+    <option>Sides</option>
+    <option>Soups & Stews</option>
+    <option>Desserts</option>
+    <option>Breads</option>
+    <option>Beans</option>
+    <option>Vegetables</option>
+    <option>Beverages</option>
+    <option>Sauces & Seasonings</option>
+    <option>Snacks</option>
+    <option>Appetizer</option>
+    <option>Reference</option>
+  </select>
+
+  <label>Author (who created this version)</label>
+  <input id="author" placeholder="e.g. Ronald Kelley">
+
+  <label>Source (original inspiration or website)</label>
+  <input id="source" placeholder="e.g. BlueZones.com or Family Recipe">
+
+  <input id="servings" placeholder="Servings (e.g. Serves 4)">
+  <input id="timing" placeholder="Timing (e.g. 20 min prep · 40 min cook)">
+</div>
+
+<!-- INGREDIENTS -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">Ingredients</div>
+  </div>
+
+  <div id="ingredients"></div>
+  <button onclick="addIngredient()">Add Ingredient</button>
+</div>
+
+<!-- PROCEDURE -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">Procedure</div>
+  </div>
+
+  <div id="procedure"></div>
+  <button onclick="addStep()">Add Step</button>
+</div>
+
+<!-- NOTES -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">Notes</div>
+  </div>
+
+  <div id="notes"></div>
+  <button onclick="addNote()">Add Note</button>
+</div>
+
+<!-- OUTPUT -->
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">recipes.json Entry</div>
+  </div>
+
+  <div style="display:flex; gap:12px; align-items:flex-start;">
+    <textarea id="jsonOutput" style="flex:1;"></textarea>
+    <button onclick="copyJSON()" style="white-space:nowrap; margin-top:6px;">
+      Copy JSON
+    </button>
+  </div>
+</div>
+
+<button onclick="generate()">Generate Recipe</button>
+
+</main>
+
+<script>
+
+function slugify(text) {
+  return text.toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function addIngredient() {
+  const container = document.getElementById('ingredients');
+  if (!container) return;
+
+  const div = document.createElement('div');
+  div.className = 'ingredient-row';
+  div.innerHTML = `
+    <input class="amount" placeholder="Amount">
+
+    <select class="unit">
+      <option value="">Unit</option>
+      <option>cup</option>
+      <option>tbsp</option>
+      <option>tsp</option>
+      <option>oz</option>
+      <option>lb</option>
+      <option>g</option>
+      <option>kg</option>
+      <option>ml</option>
+      <option>l</option>
+      <option>clove</option>
+      <option>piece</option>
+      <option>whole</option>
+      <option>can</option>
+      <option>package</option>
+      <option>dash</option>
+      <option>pinch</option>
+    </select>
+
+    <input class="ingredient" placeholder="Ingredient">
+    <input class="notes" placeholder="Notes">
+  `;
+  container.appendChild(div);
+}
+
+function addStep() {
+  const container = document.getElementById('procedure');
+  if (!container) return;
+
+  const div = document.createElement('div');
+  div.innerHTML = `<textarea class="step" placeholder="Step instruction"></textarea>`;
+  container.appendChild(div);
+}
+
+function addNote() {
+  const container = document.getElementById('notes');
+  if (!container) return;
+
+  const div = document.createElement('div');
+  div.innerHTML = `<textarea class="note" placeholder="Note"></textarea>`;
+  container.appendChild(div);
+}
+
+function copyJSON() {
+  const textarea = document.getElementById('jsonOutput');
+  textarea.select();
+  document.execCommand('copy');
+  alert("JSON copied to clipboard.");
+}
+
+function clearForm() {
+  document.querySelectorAll('input, textarea').forEach(i => i.value = '');
+  document.getElementById('ingredients').innerHTML = '';
+  document.getElementById('procedure').innerHTML = '';
+  document.getElementById('notes').innerHTML = '';
+  addIngredient();
+  addStep();
+}
+
+async function generate() {
+
+  const title = document.getElementById('title').value.trim();
+  if (!title) {
+    alert("Title is required.");
+    return;
+  }
+
+  const slug = slugify(title);
+  const category = document.getElementById('category').value;
+  const author = document.getElementById('author').value.trim();
+  const source = document.getElementById('source').value.trim();
+  const subtitle = document.getElementById('subtitle').value.trim();
+  const servings = document.getElementById('servings').value.trim();
+  const timing = document.getElementById('timing').value.trim();
+
+  // =========================
+  // BUILD INGREDIENTS HTML
+  // =========================
+  let ingredientsHTML = "";
+  document.querySelectorAll("#ingredients .ingredient-row").forEach(row => {
+    const amount = row.querySelector(".amount").value.trim();
+    const unit = row.querySelector(".unit").value.trim();
+    const ingredient = row.querySelector(".ingredient").value.trim();
+    const notes = row.querySelector(".notes").value.trim();
+
+    if (!ingredient) return;
+
+    let line = "";
+    if (amount) line += amount + " ";
+    if (unit) line += unit + " ";
+    line += ingredient;
+    if (notes) line += " (" + notes + ")";
+
+    ingredientsHTML += `<li>${line}</li>\n`;
+  });
+
+  // =========================
+  // BUILD PROCEDURE HTML
+  // =========================
+  let procedureHTML = "";
+  document.querySelectorAll("#procedure .step").forEach(step => {
+    const text = step.value.trim();
+    if (!text) return;
+    procedureHTML += `<li>${text}</li>\n`;
+  });
+
+  // =========================
+  // BUILD NOTES HTML
+  // =========================
+  let notesHTML = "";
+  document.querySelectorAll("#notes .note").forEach(note => {
+    const text = note.value.trim();
+    if (!text) return;
+    notesHTML += `<li>${text}</li>\n`;
+  });
+
+  const recipeObject = {
+    title,
+    slug,
+    category,
+    author,
+    source,
+    servings
+  };
+
+  const template = await fetch('../templates/recipe-template.html')
+    .then(r => r.text());
+
+  // =========================
+  // REPLACE ALL TEMPLATE TOKENS
+  // =========================
+  let finalHTML = template
+    .replaceAll('{{TITLE}}', title)
+    .replaceAll('{{SUBTITLE}}', subtitle)
+    .replaceAll('{{CATEGORY}}', category)
+    .replaceAll('{{AUTHOR}}', author)
+    .replaceAll('{{SOURCE}}', source)
+    .replaceAll('{{SERVINGS}}', servings)
+    .replaceAll('{{TIMING}}', timing)
+    .replace('{{INGREDIENTS_HTML}}', ingredientsHTML)
+    .replace('{{PROCEDURE_HTML}}', procedureHTML)
+    .replace('{{NOTES_HTML}}', notesHTML)
+    .replace('{{RECIPE_JSON}}', JSON.stringify(recipeObject, null, 2));
+
+  // DOWNLOAD HTML
+  const blob = new Blob([finalHTML], { type: 'text/html' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = slug + '.html';
+  link.click();
+  URL.revokeObjectURL(url);
+
+  // BUILD SIDEBAR ENTRY
+  const sidebarEntry = {
+    title,
+    slug,
+    category,
+    path: slug + '.html',
+    author,
+    source
+  };
+
+  const sidebarJSONString = JSON.stringify(sidebarEntry, null, 2) + ",";
+  document.getElementById('jsonOutput').value = sidebarJSONString;
+
+  alert("Recipe generated successfully.");
+
+  if (confirm("Generate another recipe?")) {
+    clearForm();
+  }
+}
+document.addEventListener('DOMContentLoaded', function() {
+  addIngredient();
+  addStep();
+});
+
+</script>
+
+</body>
+</html>
