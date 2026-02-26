@@ -107,7 +107,7 @@ button {
   </div>
 
   <div id="ingredients"></div>
-  <button onclick="addIngredient()">Add Ingredient</button>
+  <button type="button" onclick="addIngredient()">Add Ingredient</button>
 </div>
 
 <!-- PROCEDURE -->
@@ -117,7 +117,7 @@ button {
   </div>
 
   <div id="procedure"></div>
-  <button onclick="addStep()">Add Step</button>
+  <button type="button" onclick="addStep()">Add Step</button>
 </div>
 
 <!-- NOTES -->
@@ -127,7 +127,7 @@ button {
   </div>
 
   <div id="notes"></div>
-  <button onclick="addNote()">Add Note</button>
+  <button type="button" onclick="addNote()">Add Note</button>
 </div>
 
 <!-- OUTPUT -->
@@ -138,13 +138,13 @@ button {
 
   <div style="display:flex; gap:12px; align-items:flex-start;">
     <textarea id="jsonOutput" style="flex:1;"></textarea>
-    <button onclick="copyJSON()" style="white-space:nowrap; margin-top:6px;">
+    <button type="button" onclick="copyJSON()" style="white-space:nowrap; margin-top:6px;">
       Copy JSON
     </button>
   </div>
 </div>
 
-<button onclick="generate()">Generate Recipe</button>
+<button type="button" onclick="generate()">Generate Recipe</button>
 
 </main>
 
@@ -217,12 +217,63 @@ function copyJSON() {
 }
 
 function clearForm() {
+  // Clear text inputs + textareas
   document.querySelectorAll('input, textarea').forEach(i => i.value = '');
+
+  // Reset selects
+  const category = document.getElementById('category');
+  if (category) category.selectedIndex = 0;
+
+  // Clear dynamic sections
   document.getElementById('ingredients').innerHTML = '';
   document.getElementById('procedure').innerHTML = '';
   document.getElementById('notes').innerHTML = '';
+
+  // Re-seed with one row/step so you're not staring at a blank page
   addIngredient();
   addStep();
+}
+
+function downloadTextFile(filename, content, mimeType) {
+  const blob = new Blob([content], { type: mimeType || 'text/plain' });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+
+  // Cleanup
+  setTimeout(() => {
+    URL.revokeObjectURL(url);
+    link.remove();
+  }, 0);
+}
+
+function finishSession() {
+  // Browsers generally block window.close() unless the tab was opened by script.
+  // So we "exit" by disabling the UI and showing a friendly done message.
+  document.querySelectorAll('input, select, textarea, button').forEach(el => {
+    el.disabled = true;
+  });
+
+  const main = document.querySelector('main.recipe-container');
+  if (main) {
+    const done = document.createElement('div');
+    done.className = 'card';
+    done.innerHTML = `
+      <div class="card-header"><div class="card-title">Done</div></div>
+      <p style="margin:0 0 10px;">Downloads started for:</p>
+      <ul style="margin:0; padding-left:18px;">
+        <li><code>your-recipe.html</code></li>
+        <li><code>your-recipe.recipes.json-entry.json</code></li>
+      </ul>
+      <p style="margin:10px 0 0; color:#9aa4b2;">You can close this tab when you're ready.</p>
+    `;
+    main.appendChild(done);
+  }
 }
 
 async function generate() {
@@ -309,15 +360,8 @@ async function generate() {
     .replace('{{PROCEDURE_HTML}}', procedureHTML)
     .replace('{{NOTES_HTML}}', notesHTML)
     .replace('{{RECIPE_JSON}}', JSON.stringify(recipeObject, null, 2));
-
-  // DOWNLOAD HTML
-  const blob = new Blob([finalHTML], { type: 'text/html' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = slug + '.html';
-  link.click();
-  URL.revokeObjectURL(url);
+  // DOWNLOADS (your browser will place them in your configured Downloads location)
+  downloadTextFile(slug + '.html', finalHTML, 'text/html');
 
   // BUILD SIDEBAR ENTRY
   const sidebarEntry = {
@@ -332,11 +376,15 @@ async function generate() {
   const sidebarJSONString = JSON.stringify(sidebarEntry, null, 2) + ",";
   document.getElementById('jsonOutput').value = sidebarJSONString;
 
-  alert("Recipe generated successfully.");
+  // Download the recipes.json snippet entry as a separate file
+  downloadTextFile(slug + '.recipes.json-entry.json', sidebarJSONString + "\n", 'application/json');
 
-  if (confirm("Generate another recipe?")) {
-    clearForm();
-  }
+  setTimeout(() => {
+    const again = confirm("Downloads started (HTML + recipes.json entry). Do another recipe?");
+    if (again) { clearForm(); return; }
+    finishSession();
+  }, 50);
+  return;
 }
 document.addEventListener('DOMContentLoaded', function() {
   addIngredient();
