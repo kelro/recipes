@@ -717,5 +717,13 @@
   "path": "sourdough-crackers.html",
   "author": "Unknown",
   "source": "King Arthur Baking"
+},
+{
+  "title": "Baby Back Ribs",
+  "slug": "baby-back-ribs",
+  "category": "Main Dishes",
+  "path": "baby-back-ribs.html",
+  "author": "Kristine Rosenblatt,",
+  "source": "Kristine's Kitchen"
 }
 ]
